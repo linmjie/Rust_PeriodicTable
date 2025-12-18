@@ -1,1 +1,1 @@
-/Users/deolin/vsprojects/rust/target/debug/rust: /Users/deolin/vsprojects/rust/src/main.rs
+/home/lin/vsprojects/Rust_PeriodicTable/target/debug/rust: /home/lin/vsprojects/Rust_PeriodicTable/src/main.rs

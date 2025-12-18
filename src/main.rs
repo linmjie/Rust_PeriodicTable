@@ -26,14 +26,14 @@ macro_rules! periodicHelper {
 }
 
 macro_rules! makePeriodicTable {
-         ($table: ident {
+         (let $table: ident {
              $symbol: ident, $name: ident, $mass: literal, $number: literal
          }) => {
              let mut $table: HashMap<&str, Element> = HashMap::new();
              periodicHelper!($table, $symbol, $name, $mass, $number);
         };
 
-         ($table: ident {
+         (let $table: ident {
              $symbol: ident, $name: ident, $mass: literal, $number: literal,
              $($symbolx: ident, $namex: ident, $massx: literal, $numberx: literal),+
          }) => {
@@ -44,7 +44,7 @@ macro_rules! makePeriodicTable {
 
 fn main() {
     makePeriodicTable!(
-        periodic_table {
+        let periodic_table {
             H, hydrogen, 1.00794, 1,
             He, helium, 4.00260, 2,
             Li, lithium, 6.941, 3,
